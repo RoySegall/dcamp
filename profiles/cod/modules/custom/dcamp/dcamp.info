@@ -3,4 +3,5 @@ description = Main module of the DrupalCamp 2013
 core = 7.x
 package = DrupalCamp il
 
+dependencies[] = module_filter
 dependencies[] = twitter
