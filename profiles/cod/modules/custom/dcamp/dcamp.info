@@ -1,0 +1,6 @@
+name = DrupalCamp il 2012
+description = Main module of the DrupalCamp 2013
+core = 7.x
+package = DrupalCamp il
+
+dependencies[] = twitter

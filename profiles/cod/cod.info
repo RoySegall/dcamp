@@ -85,6 +85,10 @@ dependencies[] = cod_community
 dependencies[] = cod_sponsors
 ;dependencies[] = cod_front_page
 ;dependencies[] = cod_news
+
+; DrupalCamp
+dependencies[] = dcamp
+
 files[] = cod.profile
 ; Information added by drupal.org packaging script on 2013-01-26
 version = "7.x-1.0-alpha2"

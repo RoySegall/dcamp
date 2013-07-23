@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Install file for the DrupalCamp il module.
+ */
+
+/**
+ * Implements hook_install().
+ */
+function dcamp_enable() {
+  // Set the Twitter bootstrap as the main theme
+  db_update('system')
+    ->fields(array('status' => 1))
+    ->condition('type', 'theme')
+    ->condition('name', 'bootstrap')
+    ->execute();
+  variable_set('theme_default', 'bootstrap');
+
+  // TODO: Define the twitter settings.
+}

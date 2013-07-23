@@ -61,12 +61,13 @@ function cod_install() {
   variable_set('theme_settings', $theme_settings);
 
   // Set adaptivetheme as the default theme.
+  // TODO: Try to revert it back to adaptivetheme
   db_update('system')
       ->fields(array('status' => 1))
       ->condition('type', 'theme')
-      ->condition('name', 'sky')
+      ->condition('name', 'bootstrap')
       ->execute();
-  variable_set('theme_default', 'sky');
+  variable_set('theme_default', 'bootstrap');
 
   // Revert features to be sure everything is setup correctly.
   // Currently disabled because we don't want devs enabling them on startup
