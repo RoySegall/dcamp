@@ -115,16 +115,15 @@ function dcamp_default_page_manager_pages() {
     $pane = new stdClass();
     $pane->pid = 'new-3';
     $pane->panel = 'middle';
-    $pane->type = 'custom';
-    $pane->subtype = 'custom';
+    $pane->type = 'views_panes';
+    $pane->subtype = 'elements-panel_pane_1';
     $pane->shown = TRUE;
     $pane->access = array();
     $pane->configuration = array(
-      'admin_title' => '',
-      'title' => '',
-      'body' => 'Meet Jonathan Sacksick',
-      'format' => 'filtered_html',
-      'substitute' => TRUE,
+      'arguments' => array(
+        'field_page_value' => 'Front',
+        'field_position_value' => 'Guests',
+      ),
     );
     $pane->cache = array();
     $pane->style = array(
