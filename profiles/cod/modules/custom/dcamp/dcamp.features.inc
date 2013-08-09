@@ -4,6 +4,8 @@
  * dcamp.features.inc
  */
 
+require_once 'dcamp.features.field.inc';
+
 /**
  * Implements hook_ctools_plugin_api().
  */

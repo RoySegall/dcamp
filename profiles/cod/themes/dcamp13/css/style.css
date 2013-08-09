@@ -265,6 +265,32 @@ ul li {
     left: auto;
     right: 22px; }
 
+.slideshow {
+  position: relative; }
+  .slideshow .btn-prev {
+    position: absolute;
+    top: 182px;
+    left: 25px;
+    background: url(../images/bg-prev.png) no-repeat;
+    width: 37px;
+    height: 69px;
+    text-indent: -9999px;
+    overflow: hidden;
+    z-index: 100000; }
+  .slideshow .btn-next {
+    position: absolute;
+    top: 182px;
+    left: 25px;
+    background: url(../images/bg-prev.png) no-repeat;
+    width: 37px;
+    height: 69px;
+    text-indent: -9999px;
+    overflow: hidden;
+    background: url(../images/bg-next.png) no-repeat;
+    left: 850px;
+    right: auto;
+    z-index: 100000; }
+
 .social-networks {
   overflow: hidden;
   margin: 0 -2px 0 0; }

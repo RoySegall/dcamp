@@ -1,4 +1,5 @@
-
-.idea/workspace.xml
-
+.idea/*
+sites/*
+profiles/cod/themes/dcamp13/css/.sass-cache
 *.xml
+.idea/*
