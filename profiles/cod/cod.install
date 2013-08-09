@@ -67,7 +67,7 @@ function cod_install() {
       ->condition('type', 'theme')
       ->condition('name', 'bootstrap')
       ->execute();
-  variable_set('theme_default', 'bootstrap');
+  variable_set('theme_default', 'dcamp13');
 
   // Revert features to be sure everything is setup correctly.
   // Currently disabled because we don't want devs enabling them on startup

@@ -1,0 +1,6 @@
+name = DrupalCamp 13 theme
+description = DrupalCamp 13 subtheme.
+core = 7.x
+base theme = bootstrap
+
+stylesheets[all][] = css/style.css
