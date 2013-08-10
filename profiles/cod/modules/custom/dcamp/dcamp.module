@@ -40,14 +40,17 @@ function dcamp_front_page_elements_preproces($row, $fields) {
       }
 
       $org = !empty($wrapper_iteration->field_profile_org) ? $wrapper_iteration->field_profile_org->value() : '';
-      $full_name = !empty($wrapper_iteration->field_profile_first) && !empty($wrapper_iteration->field_profile_last) ?
-        $wrapper_iteration->field_profile_first->value() . ' ' . $wrapper_iteration->field_profile_last->value() :
-        $wrapper_iteration->label();
+      $full_name =  !empty($wrapper_iteration->field_profile_first) && !empty($wrapper_iteration->field_profile_last) &&
+        $wrapper_iteration->field_profile_last->value() && $wrapper_iteration->field_profile_first->value() ?
 
+          $wrapper_iteration->field_profile_first->value() . ' ' . $wrapper_iteration->field_profile_last->value() :
+          $wrapper_iteration->label();
+
+      $uri = entity_uri('user', $wrapper_iteration->value());
       $users[] = $picture . '
         <div class="text-holder">
           <div class="text-frame">
-            <strong>' . $full_name . '</strong>
+            <strong>' . l($full_name, $uri['path']) . '</strong>
             <span>' . $org . '</span>
           </div>
         </div>
