@@ -1,0 +1,21 @@
+<?php
+
+/**
+ * @file
+ * Main module file of the DrupalCamp migrate module.
+ */
+
+/**
+ * Implements hook_migrate_api().
+ */
+function dcamp_migrate_migrate_api() {
+  $api = array(
+    'api' => 2,
+    'migrations' => array(
+      'DrupalCampUsers' => array('class_name' => 'DrupalCampUsers'),
+      'DrupalCampSlideShow' => array('class_name' => 'DrupalCampSlideShow'),
+      'DrupalCampElements' => array('class_name' => 'DrupalCampElements'),
+    ),
+  );
+  return $api;
+}

@@ -1,0 +1,10 @@
+name = DrupalCamp migrate
+description = Importing dummy content for development.
+core = 7.x
+package = DrupalCamp il
+
+dependencies[] = migrate
+dependencies[] = migrate_ui
+
+files[] = dcamp_migrate.migrate.inc
+files[] = includes/dcamp_migrate.migrate.entity.inc
