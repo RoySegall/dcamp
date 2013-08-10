@@ -33,5 +33,6 @@ function dcamp_enable() {
   // Set pages as deault.
   variable_set('site_frontpage', 'front');
   variable_set('page_manager_user_view_disabled', TRUE);
+  variable_set('page_manager_node_view_disabled', TRUE);
   menu_rebuild();
 }

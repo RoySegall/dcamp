@@ -735,4 +735,17 @@ ul li {
 
 .in-page {
   padding-right: 290px;
+  min-height: 300px;
+}
+
+.view-drupalcamp-tweets {
+
+  td, th {
+    border: none;
+  }
+
+  .views-field-profile-image-url {
+    height: 60px;
+    width: 60px;
+  }
 }

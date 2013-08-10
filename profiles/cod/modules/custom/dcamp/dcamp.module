@@ -67,3 +67,39 @@ function dcamp_front_page_elements_preproces($row, $fields) {
 function dcamp_preprocess_page(&$variables) {
   $variables['pictures_path'] = drupal_get_path('theme', 'dcamp13');
 }
+
+/**
+ * Implements hook_user_update().
+ *
+ * When the user add a twitter account then add the account the list of twitters.
+ */
+function dcamp_user_update(&$edit, $account, $category) {
+  $wrapper = entity_metadata_wrapper('user', $account);
+
+  if (!empty($wrapper->field_twitter) && $name = $wrapper->field_twitter->value()) {
+    $twitter = twitter_connect();
+    $twitter_account = $twitter->users_show($name, FALSE);
+
+    if (isset($twitter_account->id)) {
+      $twitter_account->uid = $wrapper->getIdentifier();
+      twitter_account_save($twitter_account, FALSE);
+    }
+  }
+}
+
+/**
+ * Implements hook_twitter_account_save().
+ *
+ * When a user added a twitter account we need to set for the tweets to be
+ * pulled.
+ */
+function dcamp_twitter_account_save($value) {
+  db_update('twitter_account')
+    ->fields(array('import' => 1))
+    ->condition('screen_name', $value['screen_name'])
+  ->execute();
+
+  // Run cron for pull twitter updates.
+  variable_set('twitter_import', TRUE);
+  twitter_cron();
+}

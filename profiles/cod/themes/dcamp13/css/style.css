@@ -532,4 +532,11 @@ ul li {
     margin: 0; }
 
 .in-page {
-  padding-right: 290px; }
+  padding-right: 290px;
+  min-height: 300px; }
+
+.view-drupalcamp-tweets td, .view-drupalcamp-tweets th {
+  border: none; }
+.view-drupalcamp-tweets .views-field-profile-image-url {
+  height: 60px;
+  width: 60px; }
