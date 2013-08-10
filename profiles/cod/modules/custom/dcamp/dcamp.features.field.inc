@@ -409,7 +409,7 @@ function dcamp_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_user',
-      'label' => 'User',
+      'label' => 'Element user',
       'required' => 0,
       'settings' => array(
         'behaviors' => array(
@@ -681,6 +681,7 @@ function dcamp_field_default_fields() {
   // Translatables
   // Included for use with string extractors like potx.
   t('Body');
+  t('Element user');
   t('Icon');
   t('Page');
   t('Position');
@@ -688,7 +689,6 @@ function dcamp_field_default_fields() {
   t('The page which the element is displayed on');
   t('The position of the element in the page.');
   t('Twitter');
-  t('User');
   t('image');
 
   return $fields;

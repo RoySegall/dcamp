@@ -372,7 +372,6 @@ ul li {
     height: 69px;
     text-indent: -9999px;
     overflow: hidden;
-    z-index: 100000;
   }
 
   .btn-next {
@@ -385,9 +384,8 @@ ul li {
     text-indent: -9999px;
     overflow: hidden;
     background: url(../images/bg-next.png) no-repeat;
-    left: 850px;
-    right: auto;
-    z-index: 100000;
+    left: auto;
+    right: 22px;
   }
 }
 

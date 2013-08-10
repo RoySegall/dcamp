@@ -1,33 +1,35 @@
-<div id="wrapper">
+<div id="main">
   <div class="w1">
-    <div id="header">
-      <div class="header-holder">
-        <div class="block">
-          <div class="logo-holder">
-            <strong class="logo"><a href="#">Drupal Camp Israel 2013</a></strong>
+    <nav role="navigation">
+      <div id="header">
+        <div class="header-holder">
+          <div class="block">
+            <div class="logo-holder">
+              <strong class="logo"><a href="#">Drupal Camp Israel 2013</a></strong>
+            </div>
+            <div class="date-holder">
+              <strong class="date">09 October</strong>
+              <span>אוניברסיטת ת”א</span>
+            </div>
           </div>
-          <div class="date-holder">
-            <strong class="date">09 October</strong>
-            <span>אוניברסיטת ת”א</span>
-          </div>
+          <ul id="nav">
+            <li><a href="#">מדיה</a></li>
+            <li><a href="#">טופס משוב</a></li>
+            <li><a href="#">צור קשר</a></li>
+            <li>
+              <a href="#">קול קורא</a>
+              <ul>
+                <li><a href="#"> לנותני חסויות</a></li>
+                <li><a href="#">למרצים </a></li>
+                <li><a href="#"> לעיצוב חולצות</a></li>
+              </ul>
+            </li>
+            <li><a href="#">הרשמה</a></li>
+            <li><a href="#">אודות</a></li>
+          </ul>
         </div>
-        <ul id="nav">
-          <li><a href="#">מדיה</a></li>
-          <li><a href="#">טופס משוב</a></li>
-          <li><a href="#">צור קשר</a></li>
-          <li>
-            <a href="#">קול קורא</a>
-            <ul>
-              <li><a href="#"> לנותני חסויות</a></li>
-              <li><a href="#">למרצים </a></li>
-              <li><a href="#"> לעיצוב חולצות</a></li>
-            </ul>
-          </li>
-          <li><a href="#">הרשמה</a></li>
-          <li><a href="#">אודות</a></li>
-        </ul>
       </div>
-    </div>
+    </nav>
     <section class="<?php print _bootstrap_content_span($columns); ?>">
       <?php if (!empty($page['highlighted'])): ?>
         <div class="highlighted hero-unit"><?php print render($page['highlighted']); ?></div>

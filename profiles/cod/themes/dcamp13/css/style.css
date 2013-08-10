@@ -275,8 +275,7 @@ ul li {
     width: 37px;
     height: 69px;
     text-indent: -9999px;
-    overflow: hidden;
-    z-index: 100000; }
+    overflow: hidden; }
   .slideshow .btn-next {
     position: absolute;
     top: 182px;
@@ -287,9 +286,8 @@ ul li {
     text-indent: -9999px;
     overflow: hidden;
     background: url(../images/bg-next.png) no-repeat;
-    left: 850px;
-    right: auto;
-    z-index: 100000; }
+    left: auto;
+    right: 22px; }
 
 .social-networks {
   overflow: hidden;

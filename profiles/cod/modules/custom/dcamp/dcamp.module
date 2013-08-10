@@ -5,12 +5,55 @@
  * Main module file of the DrupalCamp IL module.
  */
 
-
+require_once 'dcamp.features.inc';
 /**
  * Implements hook_ctools_plugin_directory().
  */
 function dcamp_ctools_plugin_directory($module, $plugin) {
   if ($module == 'ctools') {
     return 'plugins/' . $plugin;
+  }
+}
+
+/**
+ * Processing information from the fields values.
+ *
+ * @param $row
+ *  The raw information for the view.
+ * @param $fields
+ *  The fields which we change their values.
+ */
+function dcamp_front_page_elements_preproces($row, $fields) {
+  // Change the icon.
+  $fields['field_icon']->content = theme('image', array('path' => drupal_get_path('theme', 'dcamp13') . '/images/' . $row->field_field_icon[0]['raw']['value']));
+
+  // Build the users display which relate to the node.
+  $wrapper = entity_metadata_wrapper('node', $row->nid);
+  $users = array();
+
+  if (!empty($wrapper->field_user) && $wrapper->field_user->value()) {
+    for ($i = 0; $i < $wrapper->field_user->count(); $i++) {
+      $wrapper_iteration = $wrapper->field_user->get($i);
+
+      if ($picture = $wrapper_iteration->value()->picture) {
+        $picture = theme('image_style', array('path' => $picture->uri, 'style_name' => 'user_image'));
+      }
+
+      $org = !empty($wrapper_iteration->field_profile_org) ? $wrapper_iteration->field_profile_org->value() : '';
+      $full_name = !empty($wrapper_iteration->field_profile_first) && !empty($wrapper_iteration->field_profile_last) ?
+        $wrapper_iteration->field_profile_first->value() . ' ' . $wrapper_iteration->field_profile_last->value() :
+        $wrapper_iteration->label();
+
+      $users[] = $picture . '
+        <div class="text-holder">
+          <div class="text-frame">
+            <strong>' . $full_name . '</strong>
+            <span>' . $org . '</span>
+          </div>
+        </div>
+      ';
+    }
+
+    $fields['field_user']->content = theme('item_list', array('items' => $users, 'attributes' => array('class' => array('img-list'))));
   }
 }
