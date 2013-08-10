@@ -13,6 +13,7 @@
         </div>
         <ul id="nav">
           <li><a href="#">מדיה</a></li>
+          </li>
           <li><a href="#">טופס משוב</a></li>
           <li><a href="#">צור קשר</a></li>
           <li>
@@ -24,7 +25,15 @@
             </ul>
           </li>
           <li><a href="#">הרשמה</a></li>
-          <li><a href="#">אודות</a></li>
+          <li>
+            <a href="#">אודות</a>
+            <ul>
+              <li><a href="#"> אודות הכנס</a></li>
+              <li><a href="#">אודות דרופל</a></li>
+              <li><a href="#"> תוכנית הכנס</a></li>
+              <li><a href="#"> כיצד להגיע</a></li>
+            </ul>
+          </li>
         </ul>
       </div>
     </div>
@@ -52,6 +61,57 @@
         <?php endif; ?>
         <?php print render($page['content']); ?>
       </section>
+      <div class="container additional">
+        <div class="photo-holder">
+          <img src="<?php print $variables['pictures_path']; ?>/images/img-05.png" width="184" height="184" alt="image description" />
+        </div>
+        <div class="description">
+          <h2><a href="#">הכנס בחסות</a></h2>
+          <div class="logo-container">
+            <a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-01.png" width="217" height="72" alt="Google" class="alignleft" /></a>
+            <a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-06.png" width="241" height="48" alt="ACQUIA" class="alignright" /></a>
+          </div>
+          <ul class="company-list">
+            <li>
+              <h3>חסות זהב</h3>
+              <div class="logos-holder">
+                <ul>
+                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>
+                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <h3>חסות כסף</h3>
+              <div class="logos-holder">
+                <ul>
+                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>
+                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>
+                </ul>
+              </div>
+            </li>
+            <li>
+              <h3>חסות ארד</h3>
+              <div class="logos-holder">
+                <ul>
+                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>
+                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </div>
+  </div>
+  <div id="footer">
+    <div class="footer-holder">
+      <div class="design">
+        <strong class="title">Design by:</strong>
+        <a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-05.png" width="96" height="49" alt="Studio Octavo" /></a><br />
+      </div>
+      <div class="holder">
+        <p>כל הזכויות שמורות לדרופל ישראל</p>
+      </div>
     </div>
   </div>
 </div>

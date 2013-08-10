@@ -60,3 +60,10 @@ function dcamp_front_page_elements_preproces($row, $fields) {
     $fields['field_user']->content = theme('item_list', array('items' => $users, 'attributes' => array('class' => array('img-list'))));
   }
 }
+
+/**
+ * Implements hook_preprocess_page().
+ */
+function dcamp_preprocess_page(&$variables) {
+  $variables['pictures_path'] = drupal_get_path('theme', 'dcamp13');
+}
