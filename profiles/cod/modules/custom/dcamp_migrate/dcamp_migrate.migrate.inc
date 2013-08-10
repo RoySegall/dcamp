@@ -78,9 +78,9 @@ class DrupalCampUsers extends Migration {
     array('name', 'Username'),
     array('pass', 'Password'),
     array('mail', 'Email'),
-    array('field_profile_first', 'First name'),
-    array('field_profile_last', 'Last name'),
-    array('field_profile_org', 'Organization'),
+    array('first_name', 'First name'),
+    array('last_name', 'Last name'),
+    array('organization', 'Organization'),
     array('picture', 'Picture'),
   );
 
@@ -93,8 +93,9 @@ class DrupalCampUsers extends Migration {
     $this->addFieldMapping('name', 'name');
     $this->addFieldMapping('pass', 'pass');
     $this->addFieldMapping('mail', 'mail');
-    $this->addFieldMapping('field_first_name', 'first_name');
-    $this->addFieldMapping('field_last_name', 'last_name');
+    $this->addFieldMapping('field_profile_first', 'first_name');
+    $this->addFieldMapping('field_profile_last', 'last_name');
+    $this->addFieldMapping('field_profile_org', 'organization');
     $this->addFieldMapping('status')
       ->defaultValue(TRUE);
 
