@@ -366,12 +366,13 @@ ul li {
   .btn-prev {
     position: absolute;
     top: 182px;
-    left: 25px;
+    left: 60px;
     background: url(../images/bg-prev.png) no-repeat;
     width: 37px;
     height: 69px;
     text-indent: -9999px;
     overflow: hidden;
+    z-index: 1000000;
   }
 
   .btn-next {
@@ -386,6 +387,7 @@ ul li {
     background: url(../images/bg-next.png) no-repeat;
     left: auto;
     right: 22px;
+    z-index: 1000000;
   }
 }
 
@@ -449,6 +451,7 @@ ul li {
 .container {
   overflow: hidden;
   margin: 0 0 60px;
+  width: 910px;
 
   .photo-holder {
     float: right;

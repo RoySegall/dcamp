@@ -26,7 +26,6 @@
 
 dcamp_front_page_elements_preproces($row, $fields);
 ?>
-
 <div class="container">
   <div class="photo-holder">
     <?php print $fields['field_icon']->content; ?>

@@ -270,12 +270,13 @@ ul li {
   .slideshow .btn-prev {
     position: absolute;
     top: 182px;
-    left: 25px;
+    left: 60px;
     background: url(../images/bg-prev.png) no-repeat;
     width: 37px;
     height: 69px;
     text-indent: -9999px;
-    overflow: hidden; }
+    overflow: hidden;
+    z-index: 1000000; }
   .slideshow .btn-next {
     position: absolute;
     top: 182px;
@@ -287,7 +288,8 @@ ul li {
     overflow: hidden;
     background: url(../images/bg-next.png) no-repeat;
     left: auto;
-    right: 22px; }
+    right: 22px;
+    z-index: 1000000; }
 
 .social-networks {
   overflow: hidden;
@@ -330,7 +332,8 @@ ul li {
 
 .container {
   overflow: hidden;
-  margin: 0 0 60px; }
+  margin: 0 0 60px;
+  width: 910px; }
   .container .photo-holder {
     float: right;
     width: 310px;
