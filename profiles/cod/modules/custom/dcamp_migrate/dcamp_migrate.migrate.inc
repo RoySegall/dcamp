@@ -82,6 +82,7 @@ class DrupalCampUsers extends Migration {
     array('last_name', 'Last name'),
     array('organization', 'Organization'),
     array('picture', 'Picture'),
+    array('twitter', 'Twitter'),
   );
 
   public $entityType = 'user';
@@ -96,6 +97,7 @@ class DrupalCampUsers extends Migration {
     $this->addFieldMapping('field_profile_first', 'first_name');
     $this->addFieldMapping('field_profile_last', 'last_name');
     $this->addFieldMapping('field_profile_org', 'organization');
+    $this->addFieldMapping('field_twitter', 'twitter');
     $this->addFieldMapping('status')
       ->defaultValue(TRUE);
 

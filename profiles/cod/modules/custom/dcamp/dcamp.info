@@ -31,6 +31,7 @@ features[image][] = slideshow
 features[image][] = user_image
 features[node][] = elements
 features[node][] = slideshow
+features[page_manager_handlers][] = user_view_panel_context
 features[page_manager_pages][] = front
 features[variable][] = comment_anonymous_elements
 features[variable][] = comment_anonymous_slideshow
