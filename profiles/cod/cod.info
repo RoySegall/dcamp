@@ -88,6 +88,7 @@ dependencies[] = cod_sponsors
 
 ; DrupalCamp
 dependencies[] = dcamp
+dependencies[] = dcamp_migrate
 
 files[] = cod.profile
 ; Information added by drupal.org packaging script on 2013-01-26
