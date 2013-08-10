@@ -102,6 +102,7 @@
       <div class="design">
         <strong class="title">Design by:</strong>
         <a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-05.png" width="96" height="49" alt="Studio Octavo" /></a><br />
+        <strong class="title">Prod to production by:</strong> <a href='https://twitter.com/RoySegall'>Roy Segall</a>
       </div>
       <div class="holder">
         <p>כל הזכויות שמורות לדרופל ישראל</p>

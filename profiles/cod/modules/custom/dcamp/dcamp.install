@@ -17,5 +17,18 @@ function dcamp_enable() {
     ->execute();
   variable_set('theme_default', 'bootstrap');
 
-  // TODO: Define the twitter settings.
+  variable_set('variable_set(twitter_consumer_key', '8JDgsCgEyBHYwci2cVBrFA');
+  variable_set('twitter_consumer_secret', '4kQHt75tdUgqWrGpMRM7XTrB8weEUTmuDLkfVUUweY');
+
+  db_update('fontyourface_font')
+    ->fields(array(
+      'enabled' => TRUE,
+      'css_selector' => 'body',
+    ))
+    ->condition('fid', 38)
+  ->execute();
+
+  variable_set('site_frontpage', 'front');
+  variable_set('page_manager_user_view_disabled', TRUE);
+  menu_rebuild();
 }
