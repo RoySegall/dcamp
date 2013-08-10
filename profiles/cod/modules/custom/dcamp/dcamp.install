@@ -17,9 +17,11 @@ function dcamp_enable() {
     ->execute();
   variable_set('theme_default', 'bootstrap');
 
-  variable_set('variable_set(twitter_consumer_key', '8JDgsCgEyBHYwci2cVBrFA');
+  // Twitter settings.
+  variable_set('twitter_consumer_key', '8JDgsCgEyBHYwci2cVBrFA');
   variable_set('twitter_consumer_secret', '4kQHt75tdUgqWrGpMRM7XTrB8weEUTmuDLkfVUUweY');
 
+  // Enable the Alef font.
   db_update('fontyourface_font')
     ->fields(array(
       'enabled' => TRUE,
@@ -28,6 +30,7 @@ function dcamp_enable() {
     ->condition('fid', 38)
   ->execute();
 
+  // Set pages as deault.
   variable_set('site_frontpage', 'front');
   variable_set('page_manager_user_view_disabled', TRUE);
   menu_rebuild();
