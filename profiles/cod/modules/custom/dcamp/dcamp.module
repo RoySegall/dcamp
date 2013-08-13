@@ -82,7 +82,7 @@ function dcamp_preprocess_page(&$variables) {
         continue;
       }
 
-      $sub_menu[] = l($parent['#title'], $parent['#href']);
+      $sub_menu[] = l($children['#title'], $children['#href']);
     }
 
     $items[] = l($parent['#title'], $parent['#href']) . theme('item_list', array('items' => $sub_menu));
