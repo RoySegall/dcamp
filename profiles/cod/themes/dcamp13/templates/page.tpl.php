@@ -4,37 +4,14 @@
       <div class="header-holder">
         <div class="block">
           <div class="logo-holder">
-            <strong class="logo"><a href="#">Drupal Camp Israel 2013</a></strong>
+            <strong class="logo"><a href="<?php print url(); ?>">Drupal Camp Israel 2013</a></strong>
           </div>
           <div class="date-holder">
             <strong class="date">09 October</strong>
             <span>אוניברסיטת ת”א</span>
           </div>
         </div>
-        <ul id="nav">
-          <li><a href="#">מדיה</a></li>
-          </li>
-          <li><a href="#">טופס משוב</a></li>
-          <li><a href="#">צור קשר</a></li>
-          <li>
-            <a href="#">קול קורא</a>
-            <ul>
-              <li><a href="#"> לנותני חסויות</a></li>
-              <li><a href="#">למרצים </a></li>
-              <li><a href="#"> לעיצוב חולצות</a></li>
-            </ul>
-          </li>
-          <li><a href="#">הרשמה</a></li>
-          <li>
-            <a href="#">אודות</a>
-            <ul>
-              <li><a href="#"> אודות הכנס</a></li>
-              <li><a href="#">אודות דרופל</a></li>
-              <li><a href="#"> תוכנית הכנס</a></li>
-              <li><a href="#"> כיצד להגיע</a></li>
-            </ul>
-          </li>
-        </ul>
+        <?php print $variables['menu']; ?>
       </div>
     </div>
     <div id="main">
@@ -62,38 +39,39 @@
         <div class="description">
           <h2><a href="#">הכנס בחסות</a></h2>
           <div class="logo-container">
-            <a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-01.png" width="217" height="72" alt="Google" class="alignleft" /></a>
-            <a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-06.png" width="241" height="48" alt="ACQUIA" class="alignright" /></a>
+            <a href="http://www.mit-forum.org.il/"><img src="<?php print $variables['pictures_path']; ?>/images/MIT logo_Heb.jpg" width="217" height="72" alt="Google" class="alignleft" /></a>
+            <a href="http://www.hamakor.org.il/"><img src="<?php print $variables['pictures_path']; ?>/images/Hamakor_logo.png" width="241" height="48" alt="ACQUIA" class="alignright" /></a>
+            <a href="http://commerceguys.com/"><img src="<?php print $variables['pictures_path']; ?>/images/cg.png" width="241" height="48" alt="ACQUIA" class="alignleft" /></a>
           </div>
-          <ul class="company-list">
-            <li>
-              <h3>חסות זהב</h3>
-              <div class="logos-holder">
-                <ul>
-                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>
-                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <h3>חסות כסף</h3>
-              <div class="logos-holder">
-                <ul>
-                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>
-                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>
-                </ul>
-              </div>
-            </li>
-            <li>
-              <h3>חסות ארד</h3>
-              <div class="logos-holder">
-                <ul>
-                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>
-                  <li><a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>
-                </ul>
-              </div>
-            </li>
-          </ul>
+<!--          <ul class="company-list">-->
+<!--            <li>-->
+<!--              <h3>חסות זהב</h3>-->
+<!--              <div class="logos-holder">-->
+<!--                <ul>-->
+<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>-->
+<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <h3>חסות כסף</h3>-->
+<!--              <div class="logos-holder">-->
+<!--                <ul>-->
+<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>-->
+<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--            <li>-->
+<!--              <h3>חסות ארד</h3>-->
+<!--              <div class="logos-holder">-->
+<!--                <ul>-->
+<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>-->
+<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>-->
+<!--                </ul>-->
+<!--              </div>-->
+<!--            </li>-->
+<!--          </ul>-->
         </div>
       </div>
   </div>
@@ -101,7 +79,7 @@
     <div class="footer-holder">
       <div class="design">
         <strong class="title">Design by:</strong>
-        <a href="#"><img src="<?php print $variables['pictures_path']; ?>/images/logo-05.png" width="96" height="49" alt="Studio Octavo" /></a><br />
+        <a href="http://www.octavo.co.il/"><img src="<?php print $variables['pictures_path']; ?>/images/logo-05.png" width="96" height="49" alt="Studio Octavo" /></a><br />
         <strong class="title">Prod to production by:</strong> <a href='https://twitter.com/RoySegall'>Roy Segall</a>
       </div>
       <div class="holder">

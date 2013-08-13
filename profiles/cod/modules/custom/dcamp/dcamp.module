@@ -65,7 +65,32 @@ function dcamp_front_page_elements_preproces($row, $fields) {
  * Implements hook_preprocess_page().
  */
 function dcamp_preprocess_page(&$variables) {
-  $variables['pictures_path'] = drupal_get_path('theme', 'dcamp13');
+  global $base_url;
+
+  $menu = menu_tree_output(menu_tree_all_data('menu-community-menu'));
+  $items = array();
+
+  foreach ($menu as $key => $parent) {
+    if (!is_int($key)) {
+      continue;
+    }
+
+    $sub_menu = array();
+
+    foreach ($parent['#below'] as $children_key => $children) {
+      if (!is_int($children_key)) {
+        continue;
+      }
+
+      $sub_menu[] = l($parent['#title'], $parent['#href']);
+    }
+
+    $items[] = l($parent['#title'], $parent['#href']) . theme('item_list', array('items' => $sub_menu));
+  }
+
+  $menu = theme('item_list', array('items' => $items, 'attributes' => array('id' => "nav")));
+  $variables['menu'] = $menu;
+  $variables['pictures_path'] = $base_url . '/' . drupal_get_path('theme', 'dcamp13');
 }
 
 /**

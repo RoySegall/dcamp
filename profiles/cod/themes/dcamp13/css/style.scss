@@ -615,6 +615,13 @@ ul li {
   .logo-container {
     overflow: hidden;
     margin: 0 0 80px;
+
+    a {
+
+      img {
+        padding-bottom: 30px;
+      }
+    }
   }
 }
 

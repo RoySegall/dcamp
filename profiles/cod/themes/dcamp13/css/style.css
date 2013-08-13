@@ -449,6 +449,8 @@ ul li {
 .container .logo-container {
   overflow: hidden;
   margin: 0 0 80px; }
+  .container .logo-container a img {
+    padding-bottom: 30px; }
 
 #main .container.additional h2 {
   border-color: #5393bc;
