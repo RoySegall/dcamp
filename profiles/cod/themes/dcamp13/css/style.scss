@@ -721,6 +721,7 @@ ul li {
 
   .design {
     float: left;
+    direction: ltr;
 
     .title {
       display: inline-block;
@@ -755,4 +756,20 @@ ul li {
     height: 60px;
     width: 60px;
   }
+}
+
+.uc-store-address-field .form-item label {
+  float: right;
+  text-align: right;
+}
+
+.line-item-subtotal {
+
+  td, th {
+    text-align: right;
+  }
+}
+
+.products {
+  text-align: right;
 }

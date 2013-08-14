@@ -521,7 +521,8 @@ ul li {
     direction: rtl;
     padding: 15px 0 0; }
   #footer .design {
-    float: left; }
+    float: left;
+    direction: ltr; }
     #footer .design .title {
       display: inline-block;
       vertical-align: middle;
@@ -542,3 +543,13 @@ ul li {
 .view-drupalcamp-tweets .views-field-profile-image-url {
   height: 60px;
   width: 60px; }
+
+.uc-store-address-field .form-item label {
+  float: right;
+  text-align: right; }
+
+.line-item-subtotal td, .line-item-subtotal th {
+  text-align: right; }
+
+.products {
+  text-align: right; }
