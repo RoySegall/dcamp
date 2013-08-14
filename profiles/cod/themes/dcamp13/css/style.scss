@@ -763,13 +763,10 @@ ul li {
   text-align: right;
 }
 
-.line-item-subtotal {
-
-  td, th {
-    text-align: right;
-  }
+.table th, .table td {
+  text-align: right !important;
 }
 
 .products {
-  text-align: right;
+  text-align: right !important;
 }

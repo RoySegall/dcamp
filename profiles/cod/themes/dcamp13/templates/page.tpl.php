@@ -80,7 +80,7 @@
       <div class="design">
         <strong class="title">Design by:</strong>
         <a href="http://www.octavo.co.il/"><img src="<?php print $variables['pictures_path']; ?>/images/logo-05.png" width="96" height="49" alt="Studio Octavo" /></a><br />
-        <strong class="title">Prod to production by:</strong> <a href='https://twitter.com/RoySegall'>Roy Segall</a> | <a href="http://ihelp.co.il/">Anat khana</a>
+        <strong class="title">Prod to production by:</strong> <a href='https://twitter.com/RoySegall'>Roy Segall</a> | <a href="http://ihelp.co.il/">Anat Kahana</a>
       </div>
       <div class="holder">
         <p>כל הזכויות שמורות ל<a href="http://drupal.org.il">דרופל ישראל</a></p>
