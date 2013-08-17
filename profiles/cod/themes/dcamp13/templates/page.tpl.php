@@ -37,22 +37,20 @@
           <img src="<?php print $variables['pictures_path']; ?>/images/img-05.png" width="184" height="184" alt="image description" />
         </div>
         <div class="description">
-          <h2><a href="#">הכנס בחסות</a></h2>
+          <h2><a href="#">שותפים</a></h2>
           <div class="logo-container">
             <a href="http://www.mit-forum.org.il/"><img src="<?php print $variables['pictures_path']; ?>/images/MIT logo_Heb.jpg" width="217" height="72" alt="Google" class="alignleft" /></a>
             <a href="http://www.hamakor.org.il/"><img src="<?php print $variables['pictures_path']; ?>/images/Hamakor_logo.png" width="241" height="48" alt="ACQUIA" class="alignright" /></a>
-            <a href="http://commerceguys.com/"><img src="<?php print $variables['pictures_path']; ?>/images/cg.png" width="241" height="48" alt="ACQUIA" class="alignleft" /></a>
           </div>
-<!--          <ul class="company-list">-->
-<!--            <li>-->
-<!--              <h3>חסות זהב</h3>-->
-<!--              <div class="logos-holder">-->
-<!--                <ul>-->
-<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>-->
-<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </li>-->
+          <ul class="company-list">
+            <li>
+              <h3>חסות זהב</h3>
+              <div class="logos-holder" style="">
+                <ul>
+                  <li><a href="http://commerceguys.com/"><img src="<?php print $variables['pictures_path']; ?>/images/cg.png" width="241" height="48" alt="ACQUIA" class="alignleft" /></a></li>
+                </ul>
+              </div>
+            </li>
 <!--            <li>-->
 <!--              <h3>חסות כסף</h3>-->
 <!--              <div class="logos-holder">-->
@@ -71,7 +69,7 @@
 <!--                </ul>-->
 <!--              </div>-->
 <!--            </li>-->
-<!--          </ul>-->
+          </ul>
         </div>
       </div>
   </div>
