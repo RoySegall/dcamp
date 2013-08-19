@@ -28,6 +28,7 @@ function dcamp_views_default_views() {
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['query']['options']['query_comment'] = FALSE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'איתחול';
   $handler->display->display_options['pager']['type'] = 'some';
   $handler->display->display_options['pager']['options']['items_per_page'] = '5';
   $handler->display->display_options['pager']['options']['offset'] = '0';
@@ -83,6 +84,7 @@ function dcamp_views_default_views() {
   $handler->display->display_options['arguments']['screen_name']['table'] = 'twitter';
   $handler->display->display_options['arguments']['screen_name']['field'] = 'screen_name';
   $handler->display->display_options['arguments']['screen_name']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['screen_name']['exception']['title'] = 'הכל';
   $handler->display->display_options['arguments']['screen_name']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['screen_name']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['screen_name']['summary']['format'] = 'default_summary';
@@ -128,7 +130,12 @@ function dcamp_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'איתחול';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ לעמוד הקודם';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'לעמוד הבא ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'לעמוד האחרון »';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Field: Content: Nid */
@@ -178,6 +185,7 @@ function dcamp_views_default_views() {
   $handler->display->display_options['arguments']['field_page_value']['table'] = 'field_data_field_page';
   $handler->display->display_options['arguments']['field_page_value']['field'] = 'field_page_value';
   $handler->display->display_options['arguments']['field_page_value']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_page_value']['exception']['title'] = 'הכל';
   $handler->display->display_options['arguments']['field_page_value']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_page_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_page_value']['summary']['format'] = 'default_summary';
@@ -188,6 +196,7 @@ function dcamp_views_default_views() {
   $handler->display->display_options['arguments']['field_position_value']['table'] = 'field_data_field_position';
   $handler->display->display_options['arguments']['field_position_value']['field'] = 'field_position_value';
   $handler->display->display_options['arguments']['field_position_value']['default_action'] = 'not found';
+  $handler->display->display_options['arguments']['field_position_value']['exception']['title'] = 'הכל';
   $handler->display->display_options['arguments']['field_position_value']['default_argument_type'] = 'fixed';
   $handler->display->display_options['arguments']['field_position_value']['summary']['number_of_records'] = '0';
   $handler->display->display_options['arguments']['field_position_value']['summary']['format'] = 'default_summary';
@@ -248,7 +257,12 @@ function dcamp_views_default_views() {
   $handler->display->display_options['cache']['type'] = 'none';
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['exposed_form']['type'] = 'basic';
+  $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'איתחול';
   $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« לעמוד הראשון';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ לעמוד הקודם';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'לעמוד הבא ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'לעמוד האחרון »';
   $handler->display->display_options['style_plugin'] = 'slideshow';
   $handler->display->display_options['style_options']['row_class'] = 'carousel';
   $handler->display->display_options['style_options']['class'] = 'bar';

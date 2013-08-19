@@ -91,6 +91,10 @@ function dcamp_preprocess_page(&$variables) {
   $menu = theme('item_list', array('items' => $items, 'attributes' => array('id' => "nav")));
   $variables['menu'] = $menu;
   $variables['pictures_path'] = $base_url . '/' . drupal_get_path('theme', 'dcamp13');
+
+  $variables['gold_sponsors'] = dcamp_get_sponsors('gold');
+  $variables['bronze_sponsors'] = dcamp_get_sponsors('bronze');
+  $variables['silver_sponsors'] = dcamp_get_sponsors('silver');
 }
 
 /**
@@ -128,3 +132,43 @@ function dcamp_twitter_account_save($value) {
   variable_set('twitter_import', TRUE);
   twitter_cron();
 }
+
+/**
+ * Create a menu item with sponsors.
+ */
+function dcamp_get_sponsors($type) {
+  $types = array(
+    'gold' => array('tid' => 2, 'title' => 'חסות זהב'),
+    'bronze' => array('tid' => 3, 'title' => 'חסות ערד'),
+    'silver' => array('tid' => 4, 'title' => 'חסות כסף'),
+  );
+
+  $query = new entityFieldQuery();
+  $result = $query
+    ->entityCondition('entity_type', 'node')
+    ->propertyCondition('type', 'sponsor')
+    ->fieldCondition('field_sponsor_sponsorship_level', 'tid', $types[$type]['tid'])
+    ->execute();
+
+  if (empty($result['node'])) {
+    return;
+  }
+
+  $nodes = node_load_multiple(array_keys($result['node']));
+
+  $items = array();
+
+  foreach ($nodes as $node) {
+    $wrapper = entity_metadata_wrapper('node', $node);
+    $image = $wrapper->field_sponsor_logo->value();
+    $image = theme('image', array('path' => $image['uri']));
+    $items[] = l($image, 'node/' . $wrapper->getIdentifier(), array('html' => TRUE));
+  }
+
+  $item_list = theme('item_list', array('items' => $items));
+
+  $list = "<h3>{$types[$type]['title']}</h3><div class='logos-holder'>{$item_list}</div>";
+
+  return $list;
+}
+

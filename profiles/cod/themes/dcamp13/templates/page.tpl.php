@@ -43,32 +43,9 @@
             <a href="http://www.hamakor.org.il/"><img src="<?php print $variables['pictures_path']; ?>/images/Hamakor_logo.png" width="241" height="48" alt="ACQUIA" class="alignright" /></a>
           </div>
           <ul class="company-list">
-            <li>
-              <h3>חסות זהב</h3>
-              <div class="logos-holder" style="">
-                <ul>
-                  <li><a href="http://commerceguys.com/"><img src="<?php print $variables['pictures_path']; ?>/images/cg.png" width="241" height="48" alt="ACQUIA" class="alignleft" /></a></li>
-                </ul>
-              </div>
-            </li>
-<!--            <li>-->
-<!--              <h3>חסות כסף</h3>-->
-<!--              <div class="logos-holder">-->
-<!--                <ul>-->
-<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>-->
-<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </li>-->
-<!--            <li>-->
-<!--              <h3>חסות ארד</h3>-->
-<!--              <div class="logos-holder">-->
-<!--                <ul>-->
-<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-03.png" width="238" height="82" alt="News geek" /></a></li>-->
-<!--                  <li><a href="#"><img src="--><?php //print $variables['pictures_path']; ?><!--/images/logo-04.png" width="235" height="55" alt="Incapsula" /></a></li>-->
-<!--                </ul>-->
-<!--              </div>-->
-<!--            </li>-->
+            <li><?php print $gold_sponsors; ?></li>
+            <li><?php print $silver_sponsors; ?></li>
+            <li><?php print $bronze_sponsors; ?></li>
           </ul>
         </div>
       </div>

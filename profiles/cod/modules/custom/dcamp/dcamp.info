@@ -36,6 +36,7 @@ features[node][] = elements
 features[node][] = slideshow
 features[page_manager_handlers][] = node_view_panel_context
 features[page_manager_handlers][] = node_view_panel_context_2
+features[page_manager_handlers][] = node_view_panel_context_3
 features[page_manager_handlers][] = user_view_panel_context
 features[page_manager_pages][] = front
 features[variable][] = comment_anonymous_elements
