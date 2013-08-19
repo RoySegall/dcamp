@@ -138,16 +138,16 @@ function dcamp_twitter_account_save($value) {
  */
 function dcamp_get_sponsors($type) {
   $types = array(
-    'gold' => array('tid' => 2, 'title' => 'חסות זהב'),
-    'bronze' => array('tid' => 3, 'title' => 'חסות ערד'),
-    'silver' => array('tid' => 4, 'title' => 'חסות כסף'),
+    'gold' => 2,
+    'bronze' => 3,
+    'silver' => 4,
   );
 
   $query = new entityFieldQuery();
   $result = $query
     ->entityCondition('entity_type', 'node')
     ->propertyCondition('type', 'sponsor')
-    ->fieldCondition('field_sponsor_sponsorship_level', 'tid', $types[$type]['tid'])
+    ->fieldCondition('field_sponsor_sponsorship_level', 'tid', $types[$type])
     ->execute();
 
   if (empty($result['node'])) {
@@ -166,8 +166,9 @@ function dcamp_get_sponsors($type) {
   }
 
   $item_list = theme('item_list', array('items' => $items));
-
-  $list = "<h3>{$types[$type]['title']}</h3><div class='logos-holder'>{$item_list}</div>";
+  $taxonomy = taxonomy_term_load($types[$type]);
+  $title = format_string('חסות @title', array('@title' => $taxonomy->name));
+  $list = "<h3>{$title}</h3><div class='logos-holder'>{$item_list}</div>";
 
   return $list;
 }
