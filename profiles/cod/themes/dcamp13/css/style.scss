@@ -167,7 +167,6 @@ ul li {
 
 #wrapper {
   position: relative;
-  overflow: hidden;
 }
 
 .w1 {
@@ -178,11 +177,13 @@ ul li {
 #header {
   position: relative;
   z-index: 10;
+
   .header-holder {
     direction: rtl;
     overflow: hidden;
     padding: 43px 0 25px;
   }
+
   .block {
     position: absolute;
     top: 0;
@@ -449,27 +450,25 @@ ul li {
 }
 
 .container {
-  overflow: hidden;
+  overflow: scroll;
   margin: 0 0 60px;
-  width: 910px;
-
-  .photo-holder {
-    float: right;
-    width: 310px;
-    text-align: center;
-    padding: 36px 0 0 10px;
-
-    img {
-      vertical-align: top;
-    }
-  }
+  width: 950px;
 
   .description {
     overflow: hidden;
   }
 }
+.photo-holder {
+  float: right;
+  width: 310px;
+  text-align: center;
+  padding: 36px 0 0 10px;
 
-#main .container h2 {
+  img {
+    vertical-align: top;
+  }
+}
+.container h2 {
   font-size: 36px;
   line-height: 38px;
   border: solid #cdc7c2;
@@ -541,7 +540,7 @@ ul li {
   }
 }
 
-#main .container p {
+.container p {
   margin: 0;
 }
 
@@ -601,15 +600,25 @@ ul li {
 }
 
 .container {
+  direction: rtl;
+
+  .additional-inner {
+    margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    width: 950px;
+  }
+
   .holder .button {
     margin: 8px 0 0;
   }
 
   &.additional {
-    background: #022c47;
-    margin: 0 -9999px;
-    padding: 55px 9999px;
     color: #fff;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    background: #022c47;
+    overflow: hidden;
   }
 
   .logo-container {
@@ -625,7 +634,7 @@ ul li {
   }
 }
 
-#main .container.additional h2 {
+.container.additional h2 {
   border-color: #5393bc;
   margin: 0 0 37px;
   padding: 1px 0 8px;
@@ -644,7 +653,7 @@ ul li {
   }
 }
 
-#main .container h3 {
+.container h3 {
   color: #f7f6f4;
   font-size: 28px;
   line-height: 30px;
@@ -708,15 +717,20 @@ ul li {
   color: #022a44;
   font-size: 14px;
   line-height: 16px;
+  width: 100%;
+
+  .container-wrapper {
+    background: #022c47;
+  }
 
   .footer-holder {
-    padding: 0 321px 0 14px;
+    margin: 0px auto;
+    width: 910px;
   }
 
   .holder {
-    overflow: hidden;
     direction: rtl;
-    padding: 15px 0 0;
+    padding: 15px 300px 0;
   }
 
   .design {

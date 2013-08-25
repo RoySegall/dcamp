@@ -120,8 +120,7 @@ ul li {
   clear: both; }
 
 #wrapper {
-  position: relative;
-  overflow: hidden; }
+  position: relative; }
 
 .w1 {
   width: 950px;
@@ -331,20 +330,21 @@ ul li {
   padding: 0 0 37px; }
 
 .container {
-  overflow: hidden;
+  overflow: scroll;
   margin: 0 0 60px;
-  width: 910px; }
-  .container .photo-holder {
-    float: right;
-    width: 310px;
-    text-align: center;
-    padding: 36px 0 0 10px; }
-    .container .photo-holder img {
-      vertical-align: top; }
+  width: 950px; }
   .container .description {
     overflow: hidden; }
 
-#main .container h2 {
+.photo-holder {
+  float: right;
+  width: 310px;
+  text-align: center;
+  padding: 36px 0 0 10px; }
+  .photo-holder img {
+    vertical-align: top; }
+
+.container h2 {
   font-size: 36px;
   line-height: 38px;
   border: solid #cdc7c2;
@@ -396,7 +396,7 @@ ul li {
   .container .text-holder strong a {
     color: #fff; }
 
-#main .container p {
+.container p {
   margin: 0; }
 
 .container p a {
@@ -439,24 +439,32 @@ ul li {
   .button:active {
     background-color: #f1300a; }
 
-.container .holder .button {
-  margin: 8px 0 0; }
-.container.additional {
-  background: #022c47;
-  margin: 0 -9999px;
-  padding: 55px 9999px;
-  color: #fff; }
-.container .logo-container {
-  overflow: hidden;
-  margin: 0 0 80px; }
-  .container .logo-container a img {
-    padding-bottom: 30px; }
+.container {
+  direction: rtl; }
+  .container .additional-inner {
+    margin: 0 auto;
+    padding-top: 55px;
+    padding-bottom: 55px;
+    width: 950px; }
+  .container .holder .button {
+    margin: 8px 0 0; }
+  .container.additional {
+    color: #fff;
+    margin: 0 auto;
+    margin-bottom: 35px;
+    background: #022c47;
+    overflow: hidden; }
+  .container .logo-container {
+    overflow: hidden;
+    margin: 0 0 80px; }
+    .container .logo-container a img {
+      padding-bottom: 30px; }
 
-#main .container.additional h2 {
+.container.additional h2 {
   border-color: #5393bc;
   margin: 0 0 37px;
   padding: 1px 0 8px; }
-  #main .container.additional h2 a {
+  .container.additional h2 a {
     color: #fff; }
 
 .container .company-list {
@@ -465,7 +473,7 @@ ul li {
     margin: 0 0 28px;
     list-style: none outside; }
 
-#main .container h3 {
+.container h3 {
   color: #f7f6f4;
   font-size: 28px;
   line-height: 30px;
@@ -513,13 +521,16 @@ ul li {
   padding: 16px 0 40px;
   color: #022a44;
   font-size: 14px;
-  line-height: 16px; }
+  line-height: 16px;
+  width: 100%; }
+  #footer .container-wrapper {
+    background: #022c47; }
   #footer .footer-holder {
-    padding: 0 321px 0 14px; }
+    margin: 0px auto;
+    width: 910px; }
   #footer .holder {
-    overflow: hidden;
     direction: rtl;
-    padding: 15px 0 0; }
+    padding: 15px 300px 0; }
   #footer .design {
     float: left;
     direction: ltr; }
